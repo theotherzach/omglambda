@@ -1,4 +1,6 @@
 Omglambda::Application.routes.draw do
+  resources :mailedaddresses
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

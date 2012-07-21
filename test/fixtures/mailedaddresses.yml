@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  branch: MyString
+  drop: MyString
+  piecepostage: 9.99
+  zipcode: MyString
+  ranktotal: 9.99
+  zipplus4: MyString
+  deliverypoint: MyString
+
+two:
+  branch: MyString
+  drop: MyString
+  piecepostage: 9.99
+  zipcode: MyString
+  ranktotal: 9.99
+  zipplus4: MyString
+  deliverypoint: MyString

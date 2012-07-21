@@ -1,0 +1,45 @@
+<%= form_for(@mailedaddress) do |f| %>
+  <% if @mailedaddress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mailedaddress.errors.count, "error") %> prohibited this mailedaddress from being saved:</h2>
+
+      <ul>
+      <% @mailedaddress.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :branch %><br />
+    <%= f.text_field :branch %>
+  </div>
+  <div class="field">
+    <%= f.label :drop %><br />
+    <%= f.text_field :drop %>
+  </div>
+  <div class="field">
+    <%= f.label :piecepostage %><br />
+    <%= f.text_field :piecepostage %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :ranktotal %><br />
+    <%= f.text_field :ranktotal %>
+  </div>
+  <div class="field">
+    <%= f.label :zipplus4 %><br />
+    <%= f.text_field :zipplus4 %>
+  </div>
+  <div class="field">
+    <%= f.label :deliverypoint %><br />
+    <%= f.text_field :deliverypoint %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

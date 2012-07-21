@@ -1,0 +1,35 @@
+<h1>Listing mailedaddresses</h1>
+
+<table>
+  <tr>
+    <th>Branch</th>
+    <th>Drop</th>
+    <th>Piecepostage</th>
+    <th>Zipcode</th>
+    <th>Ranktotal</th>
+    <th>Zipplus4</th>
+    <th>Deliverypoint</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mailedaddresses.each do |mailedaddress| %>
+  <tr>
+    <td><%= mailedaddress.branch %></td>
+    <td><%= mailedaddress.drop %></td>
+    <td><%= mailedaddress.piecepostage %></td>
+    <td><%= mailedaddress.zipcode %></td>
+    <td><%= mailedaddress.ranktotal %></td>
+    <td><%= mailedaddress.zipplus4 %></td>
+    <td><%= mailedaddress.deliverypoint %></td>
+    <td><%= link_to 'Show', mailedaddress %></td>
+    <td><%= link_to 'Edit', edit_mailedaddress_path(mailedaddress) %></td>
+    <td><%= link_to 'Destroy', mailedaddress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mailedaddress', new_mailedaddress_path %>
