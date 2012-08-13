@@ -11,18 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721205145) do
-
-  create_table "mailedaddresses", :force => true do |t|
-    t.string   "branch"
-    t.string   "drop"
-    t.decimal  "piecepostage"
-    t.string   "zipcode"
-    t.decimal  "ranktotal"
-    t.string   "zipplus4"
-    t.string   "deliverypoint"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
+ActiveRecord::Schema.define(:version => 0) do
 
 end
