@@ -11,6 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120814011433) do
+
+  create_table "households", :force => true do |t|
+    t.string   "zip"
+    t.string   "plus_4"
+    t.string   "delivery_point"
+    t.string   "address"
+    t.integer  "epsilon_key"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "import_cells", :force => true do |t|
+    t.integer  "import_table_id"
+    t.integer  "row_index"
+    t.integer  "column_index"
+    t.string   "contents"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "import_cells", ["import_table_id"], :name => "index_import_cells_on_import_table_id"
+
+  create_table "import_tables", :force => true do |t|
+    t.string   "original_path"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
 end
